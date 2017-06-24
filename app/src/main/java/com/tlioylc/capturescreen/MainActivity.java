@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-////ScrollView截图
+//ScrollView截图
 //    public Bitmap captureScreen(NestedScrollView scrollView) {
 //        int h = 0;
 //        Bitmap bitmap = null;
@@ -97,9 +97,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        scrollView.draw(canvas);
 //        return bitmap;
 //    }
-    //webView 截图    
+    //webView 截图
     private Bitmap captureScreenforRecord(){
 
+//        float scale = webView.getScale();
+//        int webViewHeight = (int) (webView.getContentHeight()*scale);
+//        Bitmap bm = Bitmap.createBitmap(webView.getWidth(),webViewHeight, Bitmap.Config.RGB_565);
+//        Canvas canvas = new Canvas(bm);
+//        webView.draw(canvas);
         webView.measure(View.MeasureSpec.makeMeasureSpec(
                 View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
